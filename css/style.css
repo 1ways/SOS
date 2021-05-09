@@ -28,8 +28,15 @@ a {
 	background: url("../images/header-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top -2px center;
+	background-position: center center;
 	height: 100vh;
+	position: relative;
+}
+
+.header__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .header__top {
@@ -41,6 +48,7 @@ a {
 	font-weight: 700;
 	font-size: 12px;
 	line-height: 16px;
+	width: 100%;
 }
 
 .header__logo {
@@ -145,13 +153,11 @@ a {
 	margin-left: 17px;
 }
 
-.header__inner {
+.header__body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 237px;
-	position: relative;
-	height: 100%;
 }
 
 .top {
@@ -198,7 +204,7 @@ a {
 	height: 24px;
 	background: #1a1917;
 	margin: 0 14px 0 11px;
-	transition: all 0.5s;
+	transition: all 0.3s;
 }
 
 .button {
@@ -217,6 +223,23 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* position: absolute; */
-	
+	position: absolute;
+	bottom: 50px;
+	cursor: pointer;
+}
+
+.header__story:hover .story__arrow {
+	transform: translateY(10px);
+}
+
+.story__text {
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.story__arrow {
+	transform: translateY(0);
+	transition: all 0.3s;
 }
