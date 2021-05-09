@@ -74,6 +74,7 @@ a {
 .select__top {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .select__language {
@@ -81,7 +82,6 @@ a {
 }
 
 .select__arrow {
-	cursor: pointer;
 	transition: all 0.3s;
 }
 
@@ -111,11 +111,15 @@ a {
 	transform: translate(0, 0);
 }
 
-.select__link {
+.select__item{
+	cursor: pointer;
+}
+
+.select__text {
 	transition: all 0.5s;
 }
 
-.select__item:hover .select__link {
+.select__item:hover .select__text {
 	color: #ffb548;
 }
 
