@@ -15,7 +15,6 @@ $(function () {
 	if (langList.length > 0) {
 		for (let i = 0; i < langList.length; i++) {
 			langList[i].id = i;
-			console.log(langList[i]);
 			if (langList[i].id == 0) {
 				currentSelectedLang.innerText = langList[i].querySelector(
 					"p"
@@ -24,6 +23,7 @@ $(function () {
 				currentId = i;
 				console.log(currentId);
 			}
+
 			langList[i].addEventListener("click", function () {
 				selectList.classList.toggle("active");
 				menuArrow.classList.toggle("active");

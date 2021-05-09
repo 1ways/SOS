@@ -69,11 +69,13 @@ a {
 
 .language__select {
 	position: relative;
+	width: 50px;
 }
 
 .select__top {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 }
 
@@ -96,7 +98,7 @@ a {
 	padding: 11px 21px 11px 8px;
 	background: rgba(0, 0, 0, 0.75);
 	border-radius: 3px;
-	right: -14px;
+	right: 0;
 	transform: translate(0, 10%);
 	opacity: 0;
 	transition: all 0.3s;
@@ -111,7 +113,7 @@ a {
 	transform: translate(0, 0);
 }
 
-.select__item{
+.select__item {
 	cursor: pointer;
 }
 
@@ -139,6 +141,82 @@ a {
 	display: flex;
 }
 
-.xbox {
-	margin-right: 17px;
+.platform__item:last-child {
+	margin-left: 17px;
+}
+
+.header__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 237px;
+	position: relative;
+	height: 100%;
+}
+
+.top {
+	font-family: "Bebas Neue", cursive;
+}
+
+.header__title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.top__title {
+	font-weight: 400;
+	font-size: 80px;
+	line-height: 96px;
+}
+
+.header__subtitle {
+	text-align: center;
+}
+
+.top__subtitle {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.button {
+	width: 260px;
+	height: 60px;
+	background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 700;
+	color: #1a1917;
+	transition: all 0.5s;
+}
+
+.button__line {
+	width: 1px;
+	height: 24px;
+	background: #1a1917;
+	margin: 0 14px 0 11px;
+	transition: all 0.5s;
+}
+
+.button {
+	margin-top: 28px;
+}
+
+.button:hover {
+	color: #fff;
+}
+
+.button:hover .button__line {
+	background: #fff;
+}
+
+.header__story {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* position: absolute; */
+	
 }
