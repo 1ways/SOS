@@ -93,6 +93,14 @@ a {
 
 .select__arrow {
 	transition: all 0.3s;
+	height: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.select__arrow img {
+	height: auto;
 }
 
 .select__arrow.active {
@@ -135,6 +143,10 @@ a {
 
 .select__item:not(:last-child) {
 	margin-bottom: 6px;
+}
+
+.select__item.last {
+	margin-bottom: 0;
 }
 
 .options__line {

@@ -12,31 +12,6 @@ $(function () {
 	let langList = document.querySelectorAll(".select__item");
 	let currentId;
 
-	// if (langList.length > 0) {
-	// 	for (let i = 0; i < langList.length; i++) {
-	// 		langList[i].id = i;
-	// 		if (langList[i].id == 0) {
-	// 			currentSelectedLang.innerText = langList[i].querySelector(
-	// 				"p"
-	// 			).innerHTML;
-	// 			langList[i].style.display = "none";
-	// 			currentId = i;
-	// 			console.log(currentId);
-	// 		}
-
-	// 		langList[i].addEventListener("click", function () {
-	// 			selectList.classList.toggle("active");
-	// 			menuArrow.classList.toggle("active");
-	// 			currentSelectedLang.innerText = langList[i].querySelector(
-	// 				"p"
-	// 			).innerHTML;
-	// 			langList[i].style.display = "none";
-	// 			langList[currentId].style.display = "block";
-	// 			currentId = i;
-	// 		});
-	// 	}
-	// }
-
 	if (langList.length > 0) {
 		langList.forEach((langItem, index) => {
 			langItem.id = index;
@@ -49,12 +24,19 @@ $(function () {
 			langItem.addEventListener("click", function () {
 				selectList.classList.toggle("active");
 				menuArrow.classList.toggle("active");
-				currentSelectedLang.innerText = langItem.querySelector(
-					"p"
-				).innerHTML;
+				currentSelectedLang.innerText = langItem.querySelector("p").innerHTML;
 				langItem.style.display = "none";
-				langItem[currentId].style.display = "block";
+				langList[currentId].style.display = "block";
 				currentId = index;
+
+				if (
+					currentSelectedLang.innerText ==
+					langList[langList.length - 1].querySelector("p").innerHTML
+				) {
+					langList[langList.length - 2].classList.add("last");
+				} else {
+					langList[langList.length - 2].classList.remove("last");
+				}
 			});
 		});
 	}
